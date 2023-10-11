@@ -13,3 +13,11 @@ body{
     margin: 2px;
     height: 25px;
 }
+
+.cell.ship {
+    background-color: grey;
+}
+
+.cell.miss {
+    background-color: red;
+}

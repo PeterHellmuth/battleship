@@ -165,6 +165,8 @@ playerTwo.opponent = playerOne;
 
 let winner = false;
 let currentPlayer = playerOne;
+
+playerOne.gameBoard.placeShip(0, 0, 5, true);
 //while (!winner) {
 //console.log("It is player one's turn");
 //}
