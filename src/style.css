@@ -1,0 +1,15 @@
+.game-board{
+    display: grid;
+    grid-template-columns: repeat(10, 25px);
+}
+
+body{
+    display: flex;
+    gap: 100px;
+}
+
+.cell{
+    background-color: aqua;
+    margin: 2px;
+    height: 25px;
+}

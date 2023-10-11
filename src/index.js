@@ -1,4 +1,7 @@
 import "./style.css";
+import { updateDOM } from "./dom.js";
+
+const BOARD_SIZE = 10;
 
 class Ship {
   constructor(length, isVertical) {
@@ -147,5 +150,25 @@ class GameBoard {
     return allShipsSunk;
   }
 }
+
+class Player {
+  constructor(opponent = null, name = "Player") {
+    this.opponent = opponent;
+    this.name = name;
+    this.gameBoard = new GameBoard(BOARD_SIZE);
+  }
+}
+
+let playerOne = new Player(null, "Player One");
+let playerTwo = new Player(playerOne, "Player Two");
+playerTwo.opponent = playerOne;
+
+let winner = false;
+let currentPlayer = playerOne;
+//while (!winner) {
+//console.log("It is player one's turn");
+//}
+
+updateDOM(playerOne, playerTwo);
 
 export { Ship, GameBoard };
