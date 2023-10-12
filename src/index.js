@@ -229,14 +229,16 @@ function cellHovered(event) {
   const { id } = cell;
   const x = Number(id.slice(9, 10));
   const y = Number(id.slice(11, 12));
-  if (placingBoats) {
-    updateDOM(
-      playerOne,
-      playerTwo,
-      [x, y],
-      boats[boats.length - 1],
-      currentIsVertical,
-    );
+  if (id.slice(0, 9) === "playerOne") {
+    if (placingBoats) {
+      updateDOM(
+        playerOne,
+        playerTwo,
+        [x, y],
+        boats[boats.length - 1],
+        currentIsVertical,
+      );
+    }
   }
 }
 
